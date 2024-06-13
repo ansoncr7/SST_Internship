@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            function validateform(){
+                let x=document.forms["myform"]["fname"].value;
+                if(x==""){
+                    alert("name must be feild out");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>javascript validate</h2>
+        <form name="myform"action="img.html"onsubmit="return validateform()"method="post">
+            name:<input type="text" name="fname">
+            <input type="submit"value="submit">
+            </form>
+    </body>
+</html>

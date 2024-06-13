@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <body>
+            
+            <script>
+                function validateform(){
+                    var name=document.getElementById("name").value;
+                    var letter = /^[a-zA-Z\s]+$/;
+                    var password=document.getElementById("password").value;
+                    var secondpassword=document.getElementById("password2").value;
+                    var mail=document.getElementById("email").value;
+                    var reg =/^([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+                    var age=document.getElementById("age").value;
+                    var course=document.getElementById("course").value;
+                    var s=0;
+
+                    if (name==""){
+                        document.getElementById("l1").innerHTML="enter name";
+                        s++;
+                    }
+                    else if(letter.test(name)==false)
+                    {
+                        document.getElementById("l1").innerHTML="enyer valid alphabets"
+                    }
+                }
+            </script>
+        </body>
+    </head>
+</html>

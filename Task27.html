@@ -1,0 +1,68 @@
+<html>
+    <head>
+       <script>
+        function validate(){
+            var name=document.getElementById("name").value;
+            var letter = /^[a-zA-Z\s]+$/;
+            var age=document.getElementById("age").value;
+            if(name==""){
+                // document.write("Enter name");
+                document.getElementById("l1").innerHTML="ENTER NAME";
+            }
+            else if(letter.test(name)==false)
+        {
+            document.getElementById("l1").innerHTML="Enter correct alphabets";
+        }  
+            if(age==""){
+                // document.write("Enter name");
+                document.getElementById("l2").innerHTML="ENTER Age"; 
+            }
+            var password=document.getElementById("password").value;
+            if(password==""){
+                document.getElementById("l3").innerHTML="enter your password";
+
+            }
+            else if(password.length<8)
+            {
+                document.getElementById("l3").innerHTML="Enter minium 8"
+            }
+            var password1=document.getElementById("password1").value;
+            if(password1==""){
+                document.getElementById("l4").innerHTML="enter your secondpassword";
+
+            }
+            else if(password != password1)
+            {
+                document.getElementById("l4").innerHTML="Enter your confirm password";
+            }
+        }
+       </script>
+    </head>
+    <body>
+        <form>
+        <table border="1">
+            
+                <th> name: </th>
+                <td><input type="text"name="name" id="name"></td>
+                <tr><td> <label id="l1"></label</td> </tr>           
+                
+                
+            </tr>
+            <th>Age:</th>
+            <td><input type="number"name="Age" id="age"></td>
+                            <tr><td> <label id="l2"></label</td> </tr>           
+<th> password: </th>
+                <td><input type="password"name="password" id="password"></td>
+                <tr><td> <label id="l3"></label</td> </tr> 
+
+                    <th>confirm password: </th>
+                    <td><input type="password"name="confirmpassword" id="confirmpassword"></td>
+                    <tr><td> <label id="l4"></label</td> </tr> 
+                  
+
+            <td><button type="button" onClick="validate()">click</button></td>
+        </tr>
+        </table>
+        </form>
+    </body>
+</html>
