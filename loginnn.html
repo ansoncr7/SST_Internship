@@ -1,0 +1,23 @@
+<html>
+    <head>
+        
+        </head>
+    <body>
+         <p>enter the frist number</p>
+        <input type="text"id="txta">
+        <input type="text"id="txtb">
+        <button onclick="sum()">+</button>
+       
+        <p id="output"></p>
+
+<script>
+    function sum(){
+        var frist=(document.getElementById("txta").value);
+        var second=(document.getElementById("txtb").value);
+        var su=frist+second;
+        document.getElementById("output").innerText=su;
+    }
+</script>
+         
+    </body>
+</html>
